@@ -16,12 +16,12 @@ class PrefHelper (context: Context) {
 
     fun put(key: String, value: String) {
         editor.putString(key, value)
-        editor.apply()
+            .apply()
     }
 
     fun put(key: String, value: Boolean) {
         editor.putBoolean(key, value)
-        editor.apply()
+            .apply()
     }
 
     fun getBoolean(key: String): Boolean {
@@ -33,7 +33,8 @@ class PrefHelper (context: Context) {
     }
 
     fun clear() {
-        editor.clear().apply()
+        editor.clear()
+            .apply()
     }
 
 }
